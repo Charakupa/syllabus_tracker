@@ -1,0 +1,286 @@
+/* Styles for the Syllabus Progress Tracker. */
+
+*{
+	box-sizing: border-box;
+}
+
+/* Overwriting some styles from BootStrap and Materialize */
+
+select{
+	display: inline-block;
+}
+
+.row{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-family: Arial,sans-serif;
+	line-height: 2;
+	border: 0;
+	min-height: 100vh;
+}
+
+/*	Now time for the real components. */
+
+#root{
+	padding: 0;
+	width: 100%;
+	margin: 0;
+	min-height: 100%;
+}
+
+#intro{
+	text-align: center;
+	padding: 4rem;
+	padding-bottom: 5rem;
+	color: #ffffff;
+	background: #0248ff ;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #0083B0, #1756f9);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #0083B0, #1756f9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.image{
+	max-width: 100%;
+}
+
+.shadowed{
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.logincontainer{
+	text-align: center;
+	background: #f3f5f9;
+	padding: 1rem;
+	padding-bottom: 3.5rem;
+}
+
+.loginform{
+	text-align: center;
+	padding: 2rem;
+	display: inline-block;
+	border: none;
+}
+
+.formlabel{
+	display: inline-block;
+	color: gray;
+	font-size: 0.75em;
+	margin: 0;
+	text-align: left;
+}
+
+#nameinput{
+	background: #f9fafa;
+	border-bottom: none;
+	border: 0.1rem solid #d4d9dd;
+	padding-left: 0.35em;
+	border-radius: 0.2rem;
+}
+
+#nameinput:focus,#nameinput:active{
+	border-bottom: none;
+}
+
+.input-field{
+	border: 0.1rem solid #d4d9dd;
+}
+
+.fullwidthbutton{
+	background: #15cd72;
+	color: #ffffff;
+	width: 100%;
+}
+
+/* Syllabus Styles */
+
+.subjectname{
+	font-size: 1.8em;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.semester{
+	padding: 0 1rem;
+	background: linear-gradient(135deg, #ffffff 50%, #2c96df 50%);
+}
+
+.semestername{
+	background: #ffffff;
+	color: #000;
+}
+
+ul{
+	padding: 1rem;
+	padding-left: 1rem !important;
+}
+
+ul li{
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	height: auto;
+	display: flex;
+	margin: 0;
+	background: #262a2c;
+	color: #fff;
+	overflow: hidden;
+	border-radius: 0.15rem;
+}
+
+ul > li > .left, ul > li > .right{
+	flex: 1;
+	vertical-align: middle;
+}
+
+ul > li > .right{
+	text-align: right;
+	padding: 1rem;
+}
+
+ul > li > .left{
+	padding: 1.2rem;
+	text-align: left;
+}
+
+.semestername{
+	padding: 1rem;
+	font-size: 1.9em;
+	font-weight: bolder;
+	display: block;
+	background: #fff;
+	color: #000;
+	border-bottom: 0.05rem solid darkgray;
+}
+
+.nocontent{
+	text-align: center;
+	display: block;
+}
+
+/* User Header Styles */
+
+.userHeader{
+	padding: 2rem;
+	border-top: 0.5rem solid #04bd8a;
+	background: #111518;
+	color: #ffffff;
+}
+
+.userName{
+	font-size: 1.3em;
+}
+
+.year{
+	font-weight: bold;
+}
+
+.course{
+	font-weight: bold;
+}
+
+.userprogress{
+	border-radius: 0.15rem;
+	padding: 0.5rem;
+	background: #2c96df;
+	text-align: center;
+}
+
+[type="checkbox"]+span:not(.lever){
+	display: inline;
+	margin: 0;
+	line-height: 2;
+	height: auto;
+}
+
+/* Modal Box for References */
+
+.modalclass {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100% !important;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content/Box */
+.modalContent {
+  background-color: #fefefe;
+  margin: 15% auto;
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+  border-radius: 0.15rem;
+  width: 80%;
+}
+
+.modalHeader{
+	display: flex;
+	background: #111518;
+	color: #fff;
+	border-bottom: 0.1rem solid #343434;
+}
+
+.modalHeader .heading{
+	flex: 7;
+	margin: 0;
+	font-size: 1.2em;
+	padding: 0.9rem;
+}
+
+/* The Close Button */
+.close {
+  color: #ffffff;
+  flex: 1;
+  text-align: right;
+  padding: 1.3rem;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalBody{
+	padding: 1rem;
+}
+
+/* Footer */
+
+footer{
+	background: #212121;
+	padding: 1.4rem;
+	color: #fff;
+	padding: 0.8rem;
+	border-bottom: 0.6rem solid #191919;
+}
+
+footer a, footer a:hover, footer a:active, footer a:active{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+footer .col-xs-9{
+	width: 75%;
+	padding: 1rem;
+}
+
+footer .col-xs-3{
+	width: 25%;
+	text-align: right;
+	padding: 1rem;
+}
+
+@media only screen and (max-width: 550px){
+	/* Phones */
+
+	.modalContent{
+		margin: 30% auto;
+	}
+}
